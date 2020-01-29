@@ -8,7 +8,8 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="featureFiles", 
 glue= {"stepdefination"},
-tags="@addtocart")
+tags="@addtocart",
+plugin= {"pretty","json:target/cucumber.json"})
 public class LoginRunner {
     
 }
