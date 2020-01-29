@@ -37,3 +37,12 @@ And user enter credentials as
  |Headphone|
  Then click add to cart 
  
+ @ui
+ Scenario: the one where the user moves to cart without adding any item in it
+ Given user has registered TestMeApp
+ When user search particular product like headphone
+ And try to proceed to payment without adding any item to cart
+ Then TestMeApp doesn't display the cart icon
+ 
+ 
+ 
